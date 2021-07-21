@@ -1,9 +1,11 @@
 import { example } from './data.js';
 import data from './data/lol/lol.js';
+
+
 for (const i in data.data) {
   document.getElementById(
     "root"
-  ).innerHTML += `<div class="champClass"><img src="${data.data[i].img}">
+  ).innerHTML += `<div class="champClass"><img src="${data.data[i].splash}">
     <p>${data.data[i].name}</p><i>${data.data[i].title}</i></div>`;
 }
 

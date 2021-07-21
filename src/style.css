@@ -1,23 +1,24 @@
 body{
     background-image: url(./img/back.jpg);
-    background-size: 100%;
-    width: 100%;
+background-attachment: scroll;
 }
 
 #root{
-display: grid;
-grid-template-columns: 20% 20% 20%;
-width: 100%;
-align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
 
 }
 
 .champClass{
-    margin: 10px 10px;
+    width: 23%;
+    margin: 10px auto;
     padding: 5px 5px;
     text-align: center;
     color: white;
-border: 2px solid white;
+    border: 2px solid white;
 
 }
 
@@ -32,3 +33,9 @@ border-radius: 5px;
  color: white;
 text-decoration: none;
 }
+
+.champClass img{
+object-fit: cover;
+width: 100%;
+}
+
