@@ -7,11 +7,46 @@ background-attachment: scroll;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
-
-
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px 50px 0px;
+}
+#logolol{
+
+   display: flex;
+   justify-content: center;
+   width: 500px;
+}
+/****** Introducción *******/
+.welcome{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px 30px 0px;
+    font-size: 40px;
+ }
+ .text-introduction{
+     color: #FFFFFF;
+     display: flex;
+     justify-content: center;
+     padding: 60px 190px 30px 190px;
+     font-size: 20px;
+     text-align: center;
+     
+     
+ }
+ .text-introduction2{
+     color: #FFFFFF;
+     display: flex;
+     justify-content: center;
+     padding: 20px 300px 90px 300px;
+     font-size: 20px;
+     text-align: center;
+ }
+/***********************************/ 
 .champClass{
     width: 23%;
     margin: 10px auto;
