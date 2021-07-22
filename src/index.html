@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <img id="logolol" src="imagenes/logolol.png" alt="">
-    </header>
-    <section id="introduction">
-      <h2 id="summoner" class="welcome">HOLA INVOCADOR</h2>
-      <p class="text-introduction">League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por
-        poderosos campeones se enfrentan para destruir la base del otro.</p>
-      <p class="text-introduction2">¡Descubre los más de 100 campeones que te acompañarán a lo largo de tus partidas!</p>
-    </section>
-<div class="">
-  <select id="roles" name="Roles">
-    <option value="value1">Roles</option>
-    <option value="value2">Asesino</option>
-    <option value="value3">Luchador</option>
-    <option value="value1">Mago</option>
-    <option value="value2">Tanque</option>
-    <option value="value3">Tirador</option>
-    <option value="value3">Soporte</option>
-  </select>
-</div>
 
-    <div id="root"></div>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-    <div class="btnup">
-      <a href="#root">Volver arriba</a>
-    </div>
-    <script src="main.js" type="module"></script>
-  </body>
+<body>
+  <header>
+    <img id="logolol" src="imagenes/logolol.png" alt="">
+  </header>
+  <section id="introduction">
+    <h2 id="summoner" class="welcome">HOLA INVOCADOR</h2>
+    <p class="text-introduction">League of Legends es un juego de estrategia por equipos en el que dos equipos
+      conformados por
+      poderosos campeones se enfrentan para destruir la base del otro.</p>
+    <p class="text-introduction2">¡Descubre los más de 100 campeones que te acompañarán a lo largo de tus partidas!</p>
+  </section>
+  <div class="">
+    <select id="roles" name="Roles">
+      <option value="All">All</option>
+      <option value="Assassin">Assassin</option>
+      <option value="Fighter">Fighter</option>
+      <option value="Mage">Mage</option>
+      <option value="Tank">Tank</option>
+      <option value="Marksman">Marksman</option>
+      <option value="Support">Support</option>
+    </select>
+  </div>
+
+  <div id="root"></div>
+
+  <div class="btnup">
+    <a href="#root">Volver arriba</a>
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
