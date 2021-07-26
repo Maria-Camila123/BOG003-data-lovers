@@ -1,8 +1,10 @@
 body {
-  background-image: url(./img/back.jpg);
-  background-attachment: scroll;
-  background-size: auto;
+  background-image: url(./imagenes/bosque.png);
+  background-attachment: fixed;
+  overflow: scroll;
   background-position-x: center;
+  background-position-y: 5%;
+  background-size: cover;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -23,21 +25,29 @@ header {
 
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 400px;
 }
 
-/****** Introducción *******/
-.welcome {
-  color: #FFFFFF;
-  text-align: center;
-  padding: 40px 0px 30px 0px;
-  font-size: 40px;
+/****** section Introducción *******/
+#welcome {
+  display: flex;
+  flex-wrap: wrap;
+  padding:40px 0px 10px 0px;
+  justify-content: center;
+  width: 1000px;
+}
+
+#introduction{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .text-introduction {
   color: #FFFFFF;
   text-align: center;
-  padding: 60px 0 30px 0;
+  padding-top: 20px;
   font-size: 1rem;
 
 
@@ -45,12 +55,37 @@ header {
 
 .text-introduction2 {
   color: #FFFFFF;
-  padding: 20px 0px 90px 0px;
-  font-size: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
-/***********************************/
+#arrows{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90px;
+  padding: 10px 0px 40px 0px;
+  
+}
+#down{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*************SELECT**********************/
+#roles{
+  background-color: rgb(41, 40, 40);
+  color:rgb(204, 204, 204);
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+
 .champClass {
   width: 23%;
   margin: 40px auto;
@@ -69,6 +104,10 @@ header {
   #logolol {
     width: 95%;
   }
+
+  #welcome {
+    width: 95%;
+  }
 }
 
 .btnup {
@@ -81,6 +120,7 @@ header {
   border-radius: 5px;
   color: white;
   text-decoration: none;
+  margin-top: 20px;
 }
 
 .champClass img {
@@ -98,4 +138,119 @@ header {
     text-transform: uppercase;
     padding: 10px 0px 0px 0px;
  }
- 
+/*********ASSASSIN***+********/
+ img#assassin{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 400px;
+ }
+
+ #role-assassin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+/*********FIGHTER***+********/
+
+img#fighter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+}
+
+#role-fighter {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 50%;
+   height: 100%;
+   position: relative;
+   color: white;
+}
+/*********MAGE***+********/
+
+img#mage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 250px;
+}
+
+#role-mage {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 50%;
+   height: 100%;
+   position: relative;
+   color: white;
+}
+/*********TANK***+********/
+
+img#tank{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 250px;
+}
+
+#role-tank {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 50%;
+   height: 100%;
+   position: relative;
+   color: white;
+}
+/*********MARKSMAN***+********/
+
+img#marksman{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 420px;
+}
+
+#role-marksman {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 50%;
+   height: 100%;
+   position: relative;
+   color: white;
+}
+
+/*********SUPPORT***+********/
+
+img#support{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+}
+
+#role-support {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 50%;
+   height: 100%;
+   position: relative;
+   color: white;
+}
+
+#champion-role{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
