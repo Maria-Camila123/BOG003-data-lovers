@@ -1,23 +1,30 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterChampions } from '../src/data.js';
 
 
-describe('example', () => {
+
+describe('filterChampions', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterChampions).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('should return 33', () => {
+    expect(filterChampions('Assassin').length).toBe(33);
+  });
+
+  it('should return 24', () => {
+    expect(filterChampions('Marksman').length).toBe(24);
   });
 });
+ 
 
 
-describe('anotherExample', () => {
+
+/*describe('showRoles', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+    expect(typeof showRoles).toBe('function');
+  });*/
 
-  it('returns `anotherExample`', () => {
+ /* it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

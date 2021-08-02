@@ -1,31 +1,88 @@
-import { filterChampions } from "./data.js";
+import { filterChampions, ascendantChamps, descendantChamps, filterArray} from "./data.js";
 import data from "./data/lol/lol.js";
 
 const listChampions = data.data;
+let role = document.getElementById("roles").value;
+
 
 document.getElementById("roles").addEventListener("change", () => {
+  //console.log(role)
   let role = document.getElementById("roles").value;
-  console.log(role);
   let listChamps = filterChampions(role);
+
   showRoles(role);
-  //hiddenRoles(All);
+ 
   document.getElementById("root").innerHTML = ``;
-  listChamps.forEach((champ) => {
-    document.getElementById(
-      "root"
-    ).innerHTML += `<div class="champClass"><img src="${listChampions[champ].splash}">
-    <p>${listChampions[champ].name}</p><i>${listChampions[champ].title}</i></div>`;
-  });
+ 
+  showChampions(listChamps);
+
+  /*let order = document.getElementById("order").value;
+  //console.log(order)
+  if (order === "Ascendant") {
+    showChampions(ascendantChamps(listChamps));
+    //console.log(showChampions(ascendantChamps))
+   }else if(order === "Descendant") {
+    showChampions(descendantChamps(listChamps));
+    //console.log(showChampions(descedantChamps))
+  } */
 });
 
+/*************ORDENAR*****************/
+
+let order = document.getElementById("order");
+order.addEventListener("change", () => {
+    //console.log(order)
+//let listChamps = filterChampions(order.value);
+let listChamps = filterArray
+console.log(listChamps)
+  if (order.value === "Ascendant") {
+      showChampions(ascendantChamps(listChamps));
+      //console.log(showChampions(ascendantChamps))
+    }else if(order.value === "Descendant") {
+      showChampions(descendantChamps(listChamps));
+      //console.log(showChampions(descedantChamps))
+  }
+})
+  
 
 
-for (const i in listChampions) {
-  document.getElementById(
-    "root"
-  ).innerHTML += `<div class="champClass"><img src="${listChampions[i].splash}">
-    <p>${listChampions[i].name}</p><i>${listChampions[i].title}</i></div>`;
+/*document.querySelector("#order").addEventListener("change", () => {
+  let order = document.getElementById("order").value;
+  console.log(order)
+   if (order == "Ascendant") {
+       showChampions(ascendantChamps(filterChampions));
+   }else if(order == "Descendant") {
+       showChampions(descendantChamps(filterChampions));
+   } 
+ });
+
+/******************************/
+
+
+
+const showChampions = (champions) => {
+document.getElementById("root").innerHTML = ``;
+  //console.log("showChampions", champions)
+ if (Array.isArray(champions)=== true){
+  champions.forEach((champ) => {
+    //console.log(listChampions[champ])
+    document.getElementById("root").innerHTML += 
+    `<div class="champClass"><img src="${listChampions[champ].splash}">
+      <p>${listChampions[champ].name}</p>
+      <i>${listChampions[champ].title}</i></div>`;
+  });
+  
+ }else {
+  for (const i in champions) {
+    document.getElementById("root").innerHTML += 
+    `<div class="champClass"><img src="${champions[i].splash}">
+      <p>${champions[i].name}</p>
+      <i>${champions[i].title}</i></div>`;
+   }
+ } 
 }
+showChampions(listChampions);
+
 
 //console.log(example, data);
 
