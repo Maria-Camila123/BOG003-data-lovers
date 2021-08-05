@@ -81,8 +81,15 @@ header {
   border-radius: 10px;
   padding: 5px 10px 5px 10px;
   flex-wrap: wrap;
-  margin-left: 15px;
+  margin-right: 10%;
 }
+
+select#roles {
+  font-size: 15px;
+
+}
+
+
 #order{
   background-color: rgb(41, 40, 40);
   color: rgb(204, 204, 204);
@@ -92,6 +99,15 @@ header {
   margin-left: 50px;
 }
 
+select#order {
+  font-size: 15px;
+}
+
+section#option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 
 .champClass {
@@ -105,6 +121,7 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
   .champClass {
     width: 90%;
   }
@@ -116,20 +133,32 @@ header {
   #welcome {
     width: 95%;
   }
+  
+
+  #role-assassin{
+    width: 95%;
+    justify-content: center;
+  }
+  div#role-marksman {
+    width: 95%;
+    justify-content: center;
+  }
+
 }
 
 .btnup {
   text-align: center;
-  margin: 5%;
+  margin: 8%;
 }
 
 .btnup a {
-  border: 2px solid white;
-  padding: 3px;
-  border-radius: 5px;
+  border: 0.75px solid white;
+  padding: 5px 15px;
+  border-radius: 20px;
   color: white;
   text-decoration: none;
   margin-top: 20px;
+  
 }
 
 .champClass img {
@@ -149,20 +178,19 @@ header {
  }
 /*********textASSASSIN***+********/
  img#assassin{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
    width: 400px;
+   margin-top: 3%;
  }
 
- #role-assassin {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-    position: relative;
+ div#role-assassin {
     color: white;
+    text-align: center;
+}
+
+.assas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*********textFIGHTER***+********/
 
@@ -173,14 +201,15 @@ img#fighter{
   width: 320px;
 }
 
-#role-fighter {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 50%;
-   height: 100%;
-   position: relative;
-   color: white;
+div#role-fighter {
+  text-align: center;
+  color: white;
+}
+
+.fight{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*********textMAGE***+********/
 
@@ -191,14 +220,14 @@ img#mage{
   width: 250px;
 }
 
-#role-mage {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 50%;
-   height: 100%;
-   position: relative;
-   color: white;
+div#role-mage {
+  text-align: center;
+  color: white;
+}
+.mag{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*********textTANK***+********/
 
@@ -209,14 +238,14 @@ img#tank{
   width: 250px;
 }
 
-#role-tank {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 50%;
-   height: 100%;
-   position: relative;
-   color: white;
+div#role-tank {
+  text-align: center;
+  color: white;
+}
+.tan-k{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /*********textMARKSMAN***+********/
 
@@ -224,17 +253,19 @@ img#marksman{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 420px;
+  width: 400px;
 }
 
-#role-marksman {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 50%;
-   height: 100%;
-   position: relative;
-   color: white;
+div#role-marksman {
+  text-align: center;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.marksm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*********textSUPPORT***+********/
@@ -245,21 +276,21 @@ img#support{
   justify-content: center;
   width: 320px;
 }
-
-#role-support {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 50%;
-   height: 100%;
-   position: relative;
-   color: white;
+div#role-support {
+  text-align: center;
+  color: white;
 }
-
+.supp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 #champion-role{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
 }

@@ -26,6 +26,7 @@
     <img id="arrows" src="imagenes/arrows.png" alt="">
   </div>
   <!---SELECT-->
+  <section id= "option">
     <select id="roles" name="Roles">
       <option id = "all" value="All">All</option>
       <option id = "assassinSelect" value="Assassin">Assassin</option>
@@ -36,47 +37,63 @@
       <option id = "supportSelect" value="Support">Support</option>
     </select>
     <select id="order" name="Order">
-      <option id = "ascendant" value="Ascendant">a  -  z</option>
-      <option id = "descendant" value="Descendant">z  -  a</option>
+      <option id = "ascendant" value="a-z">a  -  z</option>
+      <option id = "descendant" value="z-a">z  -  a</option>
     </select>
+  </section>
   <!-----</div>-->
   <!----------INFO ROLES------------->
   <section id="champion-role" >
     <div id="role-assassin" value= "Assassin">
+    <div class="assas">
     <img id="assassin" src="imagenes/roles/assassin.png" alt="">
+   </div>
     <!---<h1 id="assassin" class="rolassassin">Assassin</h1>-->
     <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
       alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
     </div>
 
     <div id="role-fighter" value="Fighter">
-    <img id="fighter" src="imagenes/roles/fighter.png" alt="">
-    <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
-      alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
+    <div class="fight">
+      <img id="fighter" src="imagenes/roles/fighter.png" alt="">
+     </div>
+    <p class="text-fighter">Los luchadores prosperan en combates prolongados mientras buscan enemigos para derribar, 
+      pero su alcance limitado los pone en riesgo constante de ser mantenido a raya por sus oponentes a través de control 
+      de masas, rango y movilidad.</p>
     </div>
 
     <div id="role-mage" value = "Mage" >
-    <img id="mage" src="imagenes/roles/mage.png" alt="">
-    <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
-      alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
+    <div class="mag">
+      <img id="mage" src="imagenes/roles/mage.png" alt="">
+     </div>
+    <p class="text-mage">Especializados en daño mágico, a menudo en ráfagas y, por lo tanto, invierten mucho en objetos 
+      que les permiten lanzar hechizos más fuertes y rápidos. Se caracterizan por una combinación de habilidades de largo alcance
+      y efectos de área.</p>
     </div>
 
     <div id="role-tank" value = "Tank">
+    <div class="tan-k">
     <img id="tank" src="imagenes/roles/tank.png" alt="">
-    <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
-      alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
+     </div>
+    <p class="text-tank">Son capaces de enfrentarse a enemigos en combate, el objetivo de un tanque no es matar enemigos; más bien, 
+      se destacan por desestabilizar a los enemigos y desviar el foco hacia ellos mismos,</p>
     </div>
 
     <div id="role-marksman" value = "Marksman">
+    <div class="marksm">
     <img id="marksman" src="imagenes/roles/marksman.png" alt="">
-    <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
-      alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
+    </div>
+    <p class="text-marksman">Los Tiradores son tremendamente vulnerables al daño de estallido debido a su blandura, y tienden a ser 
+      excepcionalmente débiles al principio del juego, requiriendo grandes cantidades de oro, principalmente a través de muertes de 
+      súbditos para adquirir artículos poderosos, pero caros, centrados en el daño.</p>
     </div>
 
     <div id="role-support" value = "Support">
-    <img id="support" src="imagenes/roles/support.png" alt="">
-    <p class="text-assassin">El campeón asesino es conocido por su especialidad al matar o desestabilizar objetivos de 
-      alto valor estratégico. Se destacan por sus habilidades en infiltración, engaño, y movimiento.</p>
+    <div class="supp">
+      <img id="support" src="imagenes/roles/support.png" alt="">
+      </div>
+    <p class="text-support">Desde la fase de lineas hasta finales de la partida, los soportes otorgan ventajas y crean oportunidades 
+      para sus compañeros de equipo puedan aprovechar. </p>
     </div>
   </section>
   <!----------------------------------->
@@ -85,7 +102,7 @@
   <div id="root"></div>
 
   <div class="btnup">
-    <a href="#root">Volver arriba</a>
+    <a href="#down">Volver arriba</a>
   </div>
   <script src="main.js" type="module"></script>
 </body>
