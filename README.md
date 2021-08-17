@@ -1,10 +1,7 @@
 
-<center>
 
-<img src="https://i.imgur.com/qVbXapO.png" width="450"/>
+<center><img src="https://i.imgur.com/qVbXapO.png" width="450"/></center>
 
-
-</center>
 
 <center>
 
@@ -38,11 +35,9 @@ Brindar a jugadores principiantes de LOL una página web donde puedan conocer lo
 
 # Historias de usuario
 
-<img src="https://i.imgur.com/FnJ2FgQ.png" width="350"/>
-<img src="https://i.imgur.com/bjqJc4S.png" width="350"/>
-<img src="https://i.imgur.com/XhrL07x.png" width="350"/>
-<img src="https://i.imgur.com/8jQjYM2.png" width="350"/>
-<img src="https://i.imgur.com/V3swd36.png" width="350"/>
+<img src="https://i.imgur.com/FnJ2FgQ.png" width="300"/> <img src="https://i.imgur.com/bjqJc4S.png" width="300"/>
+<img src="https://i.imgur.com/XhrL07x.png" width="300"/> <img src="https://i.imgur.com/8jQjYM2.png" width="300"/>
+<img src="https://i.imgur.com/V3swd36.png" width="300"/>
 
 
 # Interfaz de usuario 👩🏻‍💻
