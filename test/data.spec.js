@@ -1,4 +1,4 @@
-import { filterChampions, ascendantChamps, descendantChamps } from '../src/data.js';
+import { filterChampions, ascendantChamps, descendantChamps, computeStats } from '../src/data.js';
 
 const testExpect =  [
    {  
@@ -117,32 +117,41 @@ describe("filterChampions", () => {
     expect(filterChampions("Marksman").length).toBe(24);
   });
 
-  it("should return 24", () => {
+  it("should return 66", () => {
     expect(filterChampions("Fighter").length).toBe(66);
   });
 
-  it("should return 24", () => {
+  it("should return 52", () => {
     expect(filterChampions("Mage").length).toBe(52);
   });
 
-  it("should return 24", () => {
+  it("should return 40", () => {
     expect(filterChampions("Tank").length).toBe(40);
   });
 
-  it("should return 24", () => {
+  it("should return 27", () => {
     expect(filterChampions("Support").length).toBe(27);
   });
 });
- 
 
 
+const compuTestExpect = 
+  {
+    stats: {
+      attackdamage: 58.376,
+      attackdamageperlevel: 3.2,
+    },
+  };
 
-/*describe('showRoles', () => {
-  it('is a function', () => {
-    expect(typeof showRoles).toBe('function');
-  });*/
 
- /* it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe("computeStats", () => {
+  it("is a function", () => {
+    expect(typeof computeStats).toBe("function");
   });
-});*/
+
+ it("returns calcule of function compute stats", () => {
+  expect(computeStats(compuTestExpect)).toBe(31);
+ });
+
+});
+

@@ -1,39 +1,32 @@
-import { filterChampions, ascendantChamps, descendantChamps} from "./data.js";
+import { filterChampions, ascendantChamps, descendantChamps, computeStats} from "./data.js";
+//import lol from "./data/lol/lol.js";
 import data from "./data/lol/lol.js";
 
 const listChampions = data.data;
-//console.log("listChampions", listChampions)
-//let role = document.getElementById("roles").value;
 
 
 document.getElementById("roles").addEventListener("change", () => {
-  //console.log(role)
   let role = document.getElementById("roles").value;
   let listChamps = filterChampions(role);
-  //console.log(role)
 
   showRoles(role);
+
  
   document.getElementById("root").innerHTML = ``;
  
   showChampions(listChamps);
 
 });
-/*************ORDENAR*****************/
+/*************ORDER*****************/
 
 let order = document.getElementById("order");
 order.addEventListener("change", () => {
-    //console.log(order)
 let role = document.getElementById("roles").value;
 let listChamps = filterChampions(role);
-//let listChamps = filterArray
-//console.log(listChamps)
   if (order.value === "a-z") {
       showChampions(ascendantChamps(listChamps));
-      //console.log(showChampions(ascendantChamps))
     }else if(order.value === "z-a") {
       showChampions(descendantChamps(listChamps));
-      //console.log(showChampions(descedantChamps))
   }
 })
 
@@ -42,32 +35,195 @@ let listChamps = filterChampions(role);
 
 const showChampions = (champions) => {
   document.getElementById("root").innerHTML = ``;
-    //console.log("showChampions", champions)
    if (Array.isArray(champions)=== true){
-  //console.log("champions", champions)
     champions.forEach((champ) => {
-       //console.log("champ", champ)
-      //console.log(listChampions[champ])
-      document.getElementById("root").innerHTML += 
-      `<div class="champClass"><img src="${champ.splash}">
+      let champclass = document.createElement("div");
+      champclass.setAttribute("class", "champClass");
+      champclass.onclick = ()=>{prueba(champ)} ;
+      champclass.innerHTML += 
+      `<img src="${champ.splash}">
         <p>${champ.name}</p>
-        <i>${champ.title}</i></div>`;
+        <i>${champ.title}</i>`;  
+      document.getElementById("root").appendChild(champclass);
+
     });
     
    }else {
-     //console.log(champions)
     for (const i in champions) {
-      document.getElementById("root").innerHTML += 
-      `<div class="champClass"><img src="${champions[i].splash}">
+      let champclass = document.createElement("div");
+      champclass.setAttribute("class", "champClass");
+      champclass.onclick = ()=>{prueba(champions[i])} ;
+      champclass.innerHTML += 
+      `<img src="${champions[i].splash}">
         <p>${champions[i].name}</p>
-        <i>${champions[i].title}</i></div>`;
+        <i>${champions[i].title}</i>`;  
+      document.getElementById("root").appendChild(champclass);
      }
    } 
   }
   showChampions(listChampions);
 
-//console.log(example, data);
 
+  const prueba = (champion) => {
+     
+   modalWindow(champion);
+  }
+
+const modalWindow = (champ) => {
+
+  let modalDiv = document.getElementById("modal");
+  modalDiv.style.display = "flex";
+
+ if (champ !== undefined){
+
+  modalDiv.innerHTML = ``;
+
+ const modal = document.getElementById("modal");
+
+ const boxChamp = document.createElement("div");
+ boxChamp.id = "boxChamp";
+ modal.appendChild(boxChamp);
+
+ const boxImage = document.createElement("div");
+ boxImage.className = "boximage"
+ boxChamp.appendChild(boxImage);
+
+ const btnExit = document.createElement("button");
+ btnExit.type = "button";
+ btnExit.id = "btn-exit";
+ modal.appendChild(btnExit);
+
+ ///////////////////champion image /////////////////////////////
+ let image = document.createElement("img");
+ image.id = "champ-modal-image"
+ image.src = champ.splash;
+ boxImage.appendChild(image);
+
+ ////////////////champion name and title///////////////////////////
+ let nameChamp = document.createElement("h1");
+ let titleChamp = document.createElement("h2");
+ nameChamp.textContent = champ.name;
+ nameChamp.className = "name-champ";
+ boxChamp.appendChild(nameChamp);
+ titleChamp.textContent = champ.title;
+ titleChamp.className = "title-champ";
+ boxChamp.appendChild(titleChamp);
+
+ //////////////////description///////////////////////////////////////
+
+ let textChamp = document.createElement("div");
+ textChamp.id = "textchamp";
+ textChamp.textContent = champ.blurb;
+ boxImage.appendChild(textChamp);
+
+ 
+ let tagChamp = document.createElement("div");
+ tagChamp.id = "tagchamp";
+ boxImage.appendChild(tagChamp);
+ 
+ 
+ let tagOneChamp = document.createElement("p");
+ tagOneChamp.id = "tag-one-champ";
+ tagOneChamp.textContent = champ.tags[0];
+ tagChamp.appendChild(tagOneChamp);
+
+ if(champ.tags.length === 2){
+ let tagTwoChamp = document.createElement("p");
+ tagTwoChamp.id = "tag-two-champ";
+ tagTwoChamp.textContent = champ.tags[1];
+ tagChamp.appendChild(tagTwoChamp); 
+ }
+
+ //////////////STATS/////////////////////
+
+ let statsTitle = document.createElement("img");
+ statsTitle.id = "stats-title"; 
+ statsTitle.src = "imagenes/info/title-stats.png";
+ boxImage.appendChild(statsTitle);
+
+ let statsImage = document.createElement("div");
+ statsImage.id = "stats-image";
+ boxImage.appendChild(statsImage);
+ 
+ let imageDiv = document.createElement("div");
+ imageDiv.id = "image-div";
+ boxImage.appendChild(imageDiv);
+
+ let attackImage = document.createElement("img");
+ attackImage.id = "attack-image";
+ attackImage.src = "imagenes/info/attack.png";
+ imageDiv.appendChild(attackImage);
+ 
+ let defenseImage = document.createElement("img");
+ defenseImage.id = "defense-image";
+ defenseImage.src = "imagenes/info/defense.png";
+ imageDiv.appendChild(defenseImage);
+
+ let magicImage = document.createElement("img");
+ magicImage.id = "magic-image";
+ magicImage.src = "imagenes/info/magic.png";
+ imageDiv.appendChild(magicImage);
+
+ let difficultImage = document.createElement("img");
+ difficultImage.id = "difficult-image";
+ difficultImage.src = "imagenes/info/difficulty.png";
+ imageDiv.appendChild(difficultImage);
+
+ let infoStats = document.createElement("div");
+ infoStats.id = "stats-info";
+ boxImage.appendChild(infoStats);
+
+ let attackChamp = document.createElement("p");
+ attackChamp.id = "attack-champ";
+ attackChamp.textContent = champ.info.attack;
+ infoStats.appendChild(attackChamp);
+ 
+ let defenseChamp = document.createElement("p");
+ defenseChamp.id = "defense-champ";
+ defenseChamp.textContent = champ.info.defense;
+ infoStats.appendChild(defenseChamp);
+
+ let magicChamp = document.createElement("p");
+ magicChamp.id = "magic-champ";
+ magicChamp.textContent = champ.info.magic;
+ infoStats.appendChild(magicChamp);
+
+ let difficultChamp = document.createElement("p");
+ difficultChamp.id = "difficult-champ";
+ difficultChamp.textContent = champ.info.difficulty;
+ infoStats.appendChild(difficultChamp);
+
+ //////////////////MATHSTAS//////////////////////////////
+
+ let attackDiv = document.createElement("div");
+ attackDiv.id = "attack-div";
+ boxImage.appendChild(attackDiv);
+
+ let attackTitle = document.createElement("h3");
+ attackTitle.id = "attack-total-title";
+ attackTitle.textContent = "TOTAL DAMAGE ATTACK"
+ attackDiv.appendChild(attackTitle);
+
+ let attackCalcule = document.createElement("h1");
+ attackCalcule.id = "attack-calcule";
+ attackCalcule.textContent = computeStats(champ);
+ attackDiv.appendChild(attackCalcule);
+
+ let btnExitModal = document.getElementById("btn-exit");
+ btnExitModal.addEventListener("click",  () => modalExit ());
+ }
+}
+
+const modalExit = () => {
+  let modalClose = document.getElementById("modal");
+  modalClose.style.display = "none";
+  let container = document.getElementById("boxChamp");
+  modalClose.removeChild(container);
+}
+
+
+
+/*******************ESCONDER TEXTO EN EL HTML*******************/
 const hiddenRoles = () => {
 
   let assassinText = document.getElementById("role-assassin");
@@ -85,14 +241,10 @@ const hiddenRoles = () => {
   supportText.style.display = "none";
   
 }
-
 hiddenRoles();
-//let championRole = document.getElementById("roles");
-
 
 
 const showRoles = (role) => {
-   //let championRoleDiv = document.getElementById("champion-role");
    //role es igual a el valor de los section con el id "roles"  
    
   
@@ -104,9 +256,7 @@ const showRoles = (role) => {
   let supportText = document.getElementById("role-support");
 
 
-  //assassinText.style.display = "block";
   if (role == "Assassin"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "block";
     fighterText.style.display = "none";
     mageText.style.display = "none";
@@ -115,7 +265,6 @@ const showRoles = (role) => {
     supportText.style.display = "none";
 
   }else if (role == "Fighter"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "block";
     mageText.style.display = "none";
@@ -124,7 +273,6 @@ const showRoles = (role) => {
     supportText.style.display = "none";
   
   }else if (role == "Mage"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "none";
     mageText.style.display = "block";
@@ -133,7 +281,6 @@ const showRoles = (role) => {
     supportText.style.display = "none";
 
   }else if (role == "Tank"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "none";
     mageText.style.display = "none";
@@ -142,7 +289,6 @@ const showRoles = (role) => {
     supportText.style.display = "none";
 
   }else if (role == "Marksman"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "none";
     mageText.style.display = "none";
@@ -151,7 +297,6 @@ const showRoles = (role) => {
     supportText.style.display = "none";
   
   }else if (role == "Support"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "none";
     mageText.style.display = "none";
@@ -160,7 +305,6 @@ const showRoles = (role) => {
     supportText.style.display = "block";
   
   }else if (role == "All"){
-    //championRoleDiv.innerHTML=""
     assassinText.style.display = "none";
     fighterText.style.display = "none";
     mageText.style.display = "none";
@@ -170,19 +314,5 @@ const showRoles = (role) => {
   }
 }
 
-
-
-
-
-
-
-/*
-selectAssassin.addEventListener("click", productos);
-activities.addEventListener("change", function() {
-  if(activities.value == "addNew")
-  {
-      addActivityItem();
-  }
-});*/
 
 
