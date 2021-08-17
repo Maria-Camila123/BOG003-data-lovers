@@ -1,7 +1,7 @@
 
 <center>
 
-![](https://i.imgur.com/qVbXapO.png =500x)
+<img src="https://i.imgur.com/qVbXapO.png" width="450"/>
 
 
 </center>
@@ -10,7 +10,7 @@
 
 ### [LOL Proyecto final](https://maria-camila123.github.io/BOG003-data-lovers/src/index.html)
 
-</center>center>
+</center>
 
 
 ## Índice
@@ -38,14 +38,12 @@ Brindar a jugadores principiantes de LOL una página web donde puedan conocer lo
 
 # Historias de usuario
 
-![](https://i.imgur.com/Vv49fsC.jpg =350x) ![](https://i.imgur.com/A6X0fNw.jpg =350x)
-![](https://i.imgur.com/2VULhck.jpg =350x) ![](https://i.imgur.com/3pO4igk.jpg =350x)
+<img src="https://i.imgur.com/FnJ2FgQ.png" width="350"/>
+<img src="https://i.imgur.com/bjqJc4S.png" width="350"/>
+<img src="https://i.imgur.com/XhrL07x.png" width="350"/>
+<img src="https://i.imgur.com/8jQjYM2.png" width="350"/>
+<img src="https://i.imgur.com/V3swd36.png" width="350"/>
 
-<center>
-
-![](https://i.imgur.com/CPbnZmd.jpg =350x)
-
-</center>center>
 
 # Interfaz de usuario 👩🏻‍💻
 
@@ -82,7 +80,7 @@ Brindar a jugadores principiantes de LOL una página web donde puedan conocer lo
 
 ###### Mobile
 
-![](https://i.imgur.com/GwG7MoO.jpg =230x) ![](https://i.imgur.com/5gtSysf.jpg =230x) ![](https://i.imgur.com/Yf3FUHv.png =230x)
+<img src="https://i.imgur.com/Tp0Fo3m.png" width="800"/>
 
 
 # Unit Test 
