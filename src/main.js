@@ -39,7 +39,7 @@ const showChampions = (champions) => {
     champions.forEach((champ) => {
       let champclass = document.createElement("div");
       champclass.setAttribute("class", "champClass");
-      champclass.onclick = ()=>{prueba(champ)} ;
+      champclass.onclick = ()=>{showModal(champ)} ;
       champclass.innerHTML += 
       `<img src="${champ.splash}">
         <p>${champ.name}</p>
@@ -52,7 +52,7 @@ const showChampions = (champions) => {
     for (const i in champions) {
       let champclass = document.createElement("div");
       champclass.setAttribute("class", "champClass");
-      champclass.onclick = ()=>{prueba(champions[i])} ;
+      champclass.onclick = ()=>{showModal(champions[i])} ;
       champclass.innerHTML += 
       `<img src="${champions[i].splash}">
         <p>${champions[i].name}</p>
@@ -64,7 +64,7 @@ const showChampions = (champions) => {
   showChampions(listChampions);
 
 
-  const prueba = (champion) => {
+  const showModal = (champion) => {
      
    modalWindow(champion);
   }
