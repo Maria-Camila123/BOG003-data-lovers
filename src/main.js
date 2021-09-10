@@ -74,7 +74,7 @@ const modalWindow = (champ) => {
   let modalDiv = document.getElementById("modal");
   modalDiv.style.display = "flex";
 
- if (champ !== undefined){
+ //if (champ !== undefined){
 
   modalDiv.innerHTML = ``;
 
@@ -212,7 +212,7 @@ const modalWindow = (champ) => {
  let btnExitModal = document.getElementById("btn-exit");
  btnExitModal.addEventListener("click",  () => modalExit ());
  }
-}
+//}
 
 const modalExit = () => {
   let modalClose = document.getElementById("modal");
