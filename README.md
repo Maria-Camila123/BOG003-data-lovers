@@ -23,7 +23,7 @@
 
 # **Data Lovers**
 #### Realizado por Maria Camila Alvarez
-Este proyecto se enfoca en la creación de una página web donde se puedan filtrar datos de los campeones de League Of Legends según el interés de visualización del jugador, entre estos están ver todos los campeones en orden alfabético, ver campeones por roles, ver sus características más importantes, entre otras.
+Este proyecto se enfoca en la creación de una aplicación web responsive donde se puedan filtrar datos de los campeones de League Of Legends según el interés de visualización del jugador, entre estos están ver todos los campeones en orden alfabético, ver campeones por roles, ver sus características más importantes, entre otras.
 
 # El usuario 🤟🏼
 
