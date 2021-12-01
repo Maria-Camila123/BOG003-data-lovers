@@ -24,7 +24,10 @@ order.addEventListener("change", () => {
 let role = document.getElementById("roles").value;
 let listChamps = filterChampions(role);
   if (order.value === "a-z") {
-      showChampions(ascendantChamps(listChamps));
+    //ordenar campeones filtrados
+    const campeonesOrdenados = ascendantChamps(listChamps)
+    //mostrar campeones ordenados
+      showChampions(campeonesOrdenados);
     }else if(order.value === "z-a") {
       showChampions(descendantChamps(listChamps));
   }

@@ -1,6 +1,7 @@
 import data from "./data/lol/lol.js";
 
 let listChampions = data.data;
+console.log(listChampions);
 
 export const filterChampions = (role) => {
   let filterArray = [];
