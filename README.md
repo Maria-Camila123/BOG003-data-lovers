@@ -75,7 +75,7 @@ Brindar a jugadores principiantes de LOL una página web donde puedan conocer lo
 
 ###### Mobile
 
-<img src="https://i.imgur.com/Tp0Fo3m.png" width="800"/>
+![](https://i.imgur.com/Tp0Fo3m.png)
 
 
 # Unit Test 
